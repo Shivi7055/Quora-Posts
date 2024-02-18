@@ -1,0 +1,50 @@
+body{
+    font-family: "PT Serif", serif;
+}
+body button{
+    font-family: "PT Serif", serif;
+}
+h1{
+    color: rgb(164, 31, 31);
+    margin-top: 5px;
+}
+h4{
+    margin-bottom: 0.5rem;
+}
+.outer_div{
+    display: flex;
+    align-items: center;
+}
+.second_div{
+    position: absolute;
+    right: 20px;
+}
+first_div{
+    /* border: 2px solid black; */
+    margin-bottom: 10px;
+}
+.see_details{
+    /* border-radius: 10px; */
+    background-color:rgb(164, 31, 31);
+    color:white;
+    border: none;
+    padding: 4px 5px;
+}
+.edit_btn{
+    background-color:rgb(226, 223, 210);
+    color:rgb(164, 31, 31);
+    padding: 4px 5px;
+    border: none;
+}
+.create_btn{
+    font-weight: bold;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+.delete_btn{
+    background-color: rgb(186, 175, 24);
+    border : none;
+    padding: 2px 5px;
+    font-weight: normal;
+}

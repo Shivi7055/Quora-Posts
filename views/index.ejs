@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All posts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1>IdeaVista</h1>
+    <% for(post of posts){ %>
+    <div class="outer_div">
+        <div class="first_div">
+            <h3>@<%= post.username %></h3>
+            <h4><%= post.content %></h4>
+            <a href="http://localhost:8080/posts/<%=post.id %>"><button class="see_details">See in detail</button></a>
+            <a href="http://localhost:8080/posts/<%=post.id %>/edit"><button class="edit_btn">Edit</button></a>
+        </div>  
+        <div class="second_div">
+            <form method="POST" action="posts/<%= post.id %>?_method=DELETE">
+            <button class=delete_btn>Delete</button>
+            <!-- <a href="http://localhost:8080/posts/:id"><i class="fa-regular fa-trash-can"></i></a>   TO try -->
+            </form>
+            
+        </div>   
+    </div>
+
+        <hr>
+
+    <% } %> 
+    <br><br>
+    <a href="http://localhost:8080/posts/new"><button class="create_btn">Create new post</button></a>
+</body>
+</html>
